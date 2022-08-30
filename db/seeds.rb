@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-
+# 
 array_dates = ('01-01-1990'.to_date..'14-07-2022'.to_date).to_a
 
 #seed del modelo egresos:
@@ -29,6 +29,8 @@ end
     monto_ingreso: 20000 + i,
     tipo_ingreso: ["Venta", "otros ingresos"].sample)
 end
+
+#Creacion de seed de clientes con faker 
 
 20.times do |i|
     Cliente.create(rut_cliente: "#{(i + 1).to_s}-k", nombre_cliente: Faker::Name.name)
